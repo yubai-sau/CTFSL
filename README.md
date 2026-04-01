@@ -1,14 +1,18 @@
-# CTFSL: Cross-Task Few-Shot Learning with Structural Alignment for Hyperspectral Image Change Detection
+CTFSL: Cross-Task Few-Shot Learning with Structural Alignment for Hyperspectral Image Change Detection
+Under limited labeled samples, hyperspectral image change detection (HSI-CD) remains challenging due to insufficient semantic supervision and sensitivity to subtle spectral variations. Existing few-shot approaches alleviate data scarcity but rely on binary labels, resulting in representations that lack fine-grained semantic structure.
 
-在标注样本有限的情况下，高光谱图像变化检测（HSI-CD）面临着语义监督不足和对细微光谱变化敏感的挑战。现有的少样本（few-shot）方法虽然缓解了数据稀缺问题，但大多依赖于二值标签，导致特征表示缺乏细粒度的语义结构。
+To address these issues, we propose a Cross-Task Few-Shot Learning framework (CTFSL) that transfers semantic knowledge from hyperspectral classification to change detection. This project includes the following core contributions:
 
-为了解决这些问题，我们提出了一种**跨任务少样本学习框架（CTFSL）**，将语义知识从高光谱分类任务迁移到变化检测任务中。本项目包含以下核心贡献：
-1. **任务级结构对齐机制 (TLSA)**：缓解多类分类监督与二值变化检测监督之间的差异，学习任务兼容的特征表示。
-2. **协同适应策略 (CDA)**：对齐特征分布的同时保留判别性结构，提升域偏移下的鲁棒性。
-3. **频率感知多尺度特征提取器 (FMFE)**：显式建模不同频率分量上的光谱-空间变化，提高对细微变化的敏感度。
+Task-Level Structural Alignment (TLSA) mechanism: Mitigates the discrepancy between multi-class and binary supervision, enabling the learning of task-compatible representations.
 
- (Requirements)
+Collaborative Adaptation (CDA) strategy: Aligns feature distributions while preserving discriminative structure, enhancing robustness under domain shift.
 
-请确保你的运行环境满足以下条件：
-* Python >= 3.8
-* PyTorch >= 1.10.0
+Frequency-aware Multi-scale Feature Extractor (FMFE): Explicitly models spectral-spatial variations across different frequency components, improving sensitivity to subtle changes.
+
+(Requirements)
+
+Please ensure your running environment meets the following conditions:
+
+Python >= 3.8
+
+PyTorch >= 1.10.0
